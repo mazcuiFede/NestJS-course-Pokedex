@@ -1,0 +1,23 @@
+### Post pokemon
+POST http://localhost:3000/api/v2/pokemon
+content-type: application/json
+
+{
+    "no": 5,
+    "name": "Mew"
+}
+
+### Get pokemon
+GET http://localhost:3000/api/v2/pokemon
+
+### Get pokemon by id
+GET http://localhost:3000/api/v2/pokemon/62ff73e6c26f7912d886f278
+
+### Post pokemon
+PATCH http://localhost:3000/api/v2/pokemon/62ff73e6c26f7912d886f278
+content-type: application/json
+
+{
+    "name": "matias",
+    "no": 3
+}
