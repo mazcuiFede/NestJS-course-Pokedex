@@ -15,7 +15,7 @@ export class PokemonService {
   constructor(
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>,
-  ) {}
+  ) { }
 
   async create(createPokemonDto: CreatePokemonDto) {
     try {
@@ -35,7 +35,7 @@ export class PokemonService {
     let pokemon: Pokemon;
 
     if (!isNaN(+term)) {
-      pokemon = await this.pokemonModel.findOne({ id: +term });
+      pokemon = await this.pokemonModel.findOne({ no: +term });
     }
 
     if (!pokemon && isValidObjectId(term)) {
